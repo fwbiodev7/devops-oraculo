@@ -1,15 +1,15 @@
 name: Oráculo DevOps
 
-# QUANDO rodar: a cada push ou pelo botão Run workflow
 on:
   push:
   workflow_dispatch:
+  schedule:
+    # 11h UTC = 8h em Brasília (UTC-3), de segunda a sexta
+    - cron: "0 11 * * 1-5"
 
 jobs:
   consultar-oraculo:
-    # ONDE rodar: num computador Linux do GitHub
     runs-on: ubuntu-latest
-    # O QUE fazer: passos executados em ordem
     steps:
       - name: Baixar o código
         uses: actions/checkout@v5
