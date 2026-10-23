@@ -71,6 +71,20 @@ As três etapas foram executadas no GitHub Actions, com commits separados. A fal
 
 ![PRINT 1: execução inicial aprovada, com a previsão do Oráculo DevOps no Summary](docs/evidencias/print-1.png)
 
+### PRINT 2 — falha proposital e mensagem de erro
+
+O passo **Rodar os testes** falhou com `AssertionError: Poucas previsões!`. A captura também mostra que **Consultar o oráculo** foi pulado.
+
+![PRINT 2: X vermelho, erro Poucas previsões e passo Consultar o oráculo pulado](docs/evidencias/print-2.png)
+
+### PRINT 3 — sucesso após o conserto
+
+Depois de restaurar as previsões e adicionar três novas, os testes passaram novamente e a previsão voltou a aparecer no Summary.
+
+![PRINT 3: check verde após o conserto e previsão no Summary](docs/evidencias/print-3.png)
+
+As três capturas são registros reais das execuções da atividade, preservados sem alterações.
+
 ### Três previsões adicionadas no conserto
 
 - “Seu café vai acabar exatamente quando o pipeline ficar verde.”
